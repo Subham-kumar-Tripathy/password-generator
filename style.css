@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.data-indicator {
+    width: 50px;
+    height: 10px;
+    background-color: #f00;
+    transition: background-color 0.3s ease;
+}
+.copy-button img {
+    cursor: pointer;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background: linear-gradient(90deg, rgba(156, 39, 176, 1) 0%, rgba(103, 58, 183, 1) 100%);
+}
+.wrapper{
+    width:90%;
+    max-width:450px;
+}
+h1{
+    color:rgb(255, 255, 255);
+    opacity:0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.display-container{
+    position: relative;
+    background-color: rgb(68, 8, 94);
+    border-radius:1rem;
+    border-bottom:0.35rem solid rgb(159, 49, 206);
+    margin:1rem 0;
+    padding-top:0.35rem;
+}
+.displaypass{
+        width:100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 1.15rem 1rem;
+        color: yellow;
+        font-weight:600;
+        font-size: 1.5rem;
+        line-height: 3px;
+        letter-spacing: 2px;
+        padding:2rem;
+        border:none;
+}
+.displaypass::placeholder{
+    text-transform: uppercase;
+    color:yellow;
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    opacity:0.65;
+    transform: translateY(-50%);
+}
+.display-container button{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 1.5rem;
+}
+.input-container{
+    background-color: rgb(68, 8, 94);
+    width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom:0.35rem solid rgb(159, 49, 206);
+}
+.length-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sut{
+    color: floralwhite;
+    font-size: 1.5rem;
+}
+.data-length{
+    color:yellow;
+    font-size: 1.5rem;
+}
+#strenthwala{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2 rem;
+
+}
+.strengthtext{
+    color: floralwhite;
+    font-size: 1.5rem;
+}
+.data-indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+
+}
+.passwordbutton{
+    width:100%;
+    margin-top:20px;
+    padding:1rem 0;
+    background-color: rgb(160, 71, 201);
+    text-align: center;
+    border-radius:0.75rem;
+    border-bottom:0.35rem solid rgb(159, 49, 206);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1rem;
+    border-right: rgb(160, 71, 201);
+    border-left: rgb(160, 71, 201);
+    border-right: rgb(160, 71, 201);
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+    gap:0 1rem;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius:0.35rem;
+}
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content:'✓';
+    position: absolute;
+    color:black;
+    font-size:1.05em;
+    font-weight: 900;
+    left:50%;
+    top:-3.5px;
+    transform:translateX(-50%) translateY(24%);
+}
+.check label{
+    color:white;
+    font-size:1.25rem;
+    letter-spacing: 0.75px;
+} 
+.data-lengthsliders{
+    appearance: none;
+    width:100%;
+    height:0.75rem;
+    cursor: pointer;
+    background-color:rgb(160, 71, 201);
+    border-radius:1rem;
+    margin-top: 2rem;
+    margin-bottom:1.5rem;
+    background-image:linear-gradient(rgb(160, 71, 201),rgb(160, 71, 201));
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+.data-lengthsliders::-webkit-slider-thumb {
+    position: relative;
+    appearance: none;
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor:pointer;
+    margin-top:-3px;
+    box-shadow: 0px 0px 20px 0px rgb(214, 220, 96);
+    transition: all 100ms ease-in;
+}
+.data-lengthsliders:focus{
+outline:2px solid yellow;
+}
+.data-lengthsliders::-webkit-slider-thumb:hover{
+    outline:2px solid yellow;
+    background-color:black;
+    box-shadow:0px 0px 25px 5px yellow;
+}
+#copytt{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+#tooltip{
+    background-color:white;
+    position: absolute;
+    color: rgb(8, 8, 73);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius:1rem;
+    opacity:0;
+    transform: scale(0);
+    transform-origin:bottom;
+    transition:all 250ms ease-in-out;
+}
+#tooltip.active{
+    opacity:1;
+    transform: scale(1);
+}
